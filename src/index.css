@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Geist:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 24 10% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 24 10% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 24 10% 10%;
+    --primary: 40 48% 56%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 40 33% 98%;
+    --secondary-foreground: 24 10% 10%;
+    --muted: 40 33% 98%;
+    --muted-foreground: 25 5% 45%;
+    --accent: 40 48% 45%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 40 20% 90%;
+    --input: 40 20% 90%;
+    --ring: 40 48% 56%;
+    --radius: 0rem;
+
+    --font-sans: 'Geist', sans-serif;
+    --font-serif: 'Playfair Display', serif;
+
+    --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.2);
+  }
+
+  .dark {
+    --background: 24 10% 5%;
+    --foreground: 40 33% 98%;
+    --card: 24 10% 8%;
+    --card-foreground: 40 33% 98%;
+    --popover: 24 10% 8%;
+    --popover-foreground: 40 33% 98%;
+    --primary: 40 48% 60%;
+    --primary-foreground: 24 10% 5%;
+    --secondary: 24 10% 12%;
+    --secondary-foreground: 40 33% 98%;
+    --muted: 24 10% 12%;
+    --muted-foreground: 25 5% 65%;
+    --accent: 40 48% 50%;
+    --accent-foreground: 40 33% 98%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 40 33% 98%;
+    --border: 24 10% 15%;
+    --input: 24 10% 15%;
+    --ring: 40 48% 60%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
